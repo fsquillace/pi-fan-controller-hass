@@ -1,0 +1,21 @@
+name: "Fancontrol"
+description: "Daemon to control fan for CPU temperature on Raspberry Pi"
+version: "1.1.4"
+slug: "fancontrol"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+startup: services
+devices:
+  - /dev/gpiomem
+privileged:
+  - NET_ADMIN
+  - NET_RAW
+  - SYS_ADMIN
+  - SYS_RAWIO
+  - SYS_MODULE
+  - SYS_RESOURCE
